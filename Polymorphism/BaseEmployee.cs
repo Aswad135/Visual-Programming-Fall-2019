@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Polymorphism
+namespace Polymorphism.Basics
 {
-    public interface IEmployee
+    interface IEmployee
     {
         void Upload();
     }
@@ -54,7 +54,7 @@ namespace Polymorphism
         
     }
 
-    public class Staff : BaseEmployee
+    public class Staff : BaseEmployee, IEmployee
     {
         public int Hours { get; set; }
         public decimal Rate { get; set; }
@@ -63,6 +63,11 @@ namespace Polymorphism
         //    //base.Print();
         //    Console.WriteLine("The staff header");
         //}
+
+        public void Upload()
+        {
+            Console.WriteLine("Staff employee documents are uploaded.");
+        }
 
         public Staff(int id, string fname): base(id, fname)
         {
@@ -90,6 +95,26 @@ namespace Polymorphism
         public override decimal CalculateSalary()
         {
             return this.Salary;
+        }
+
+    }
+
+    public class PolymorphismBasicsDemo
+    {
+        static void Main_PolymorphsimBasics(string[] args)
+        {
+            BaseEmployee employee = new Faculty(100, "Aamir");
+
+            employee.Print();
+
+            employee = new Staff(200, "Mohiuddin");
+
+            employee.Print();
+
+            employee = new AdminEmployee(800, "Amjad Khan");
+            employee.Print();
+
+            Console.ReadKey();
         }
 
     }

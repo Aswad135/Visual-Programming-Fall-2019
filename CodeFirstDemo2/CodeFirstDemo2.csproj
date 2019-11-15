@@ -5,10 +5,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D85A47BE-DC65-4EC6-B829-7F75B650E897}</ProjectGuid>
+    <ProjectGuid>{0E30906F-5EBB-4195-8286-6FCAEB1A7739}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Polymorphism</RootNamespace>
-    <AssemblyName>Polymorphism</AssemblyName>
+    <RootNamespace>CodeFirstDemo2</RootNamespace>
+    <AssemblyName>CodeFirstDemo2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,9 +45,6 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
-    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,79 +53,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseEmployee.cs" />
-    <Compile Include="Collections\Collections.cs" />
-    <Compile Include="DatabaseFirst\DatabaseFirstDemo.cs" />
-    <Compile Include="DatabaseFirst\Student.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Student.Context.tt</DependentUpon>
+    <Compile Include="Migrations\201910300537139_DatabaseCreated.cs" />
+    <Compile Include="Migrations\201910300537139_DatabaseCreated.designer.cs">
+      <DependentUpon>201910300537139_DatabaseCreated.cs</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseFirst\Student.cs">
-      <DependentUpon>Student.tt</DependentUpon>
+    <Compile Include="Migrations\201910300602219_CourseTableAdded.cs" />
+    <Compile Include="Migrations\201910300602219_CourseTableAdded.designer.cs">
+      <DependentUpon>201910300602219_CourseTableAdded.cs</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseFirst\Student.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Student.edmx</DependentUpon>
+    <Compile Include="Migrations\201910300605505_RelationshipCreated.cs" />
+    <Compile Include="Migrations\201910300605505_RelationshipCreated.designer.cs">
+      <DependentUpon>201910300605505_RelationshipCreated.cs</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseFirst\Student1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Student.tt</DependentUpon>
+    <Compile Include="Migrations\201910300613259_RelationshipUpdated.cs" />
+    <Compile Include="Migrations\201910300613259_RelationshipUpdated.designer.cs">
+      <DependentUpon>201910300613259_RelationshipUpdated.cs</DependentUpon>
     </Compile>
-    <Compile Include="Delegates\CSSessional1.cs" />
-    <Compile Include="Delegates\CSSessional1Solution.cs" />
-    <Compile Include="Delegates\DelegatesAdvance.cs" />
-    <Compile Include="Delegates\Delegates.cs" />
-    <Compile Include="Delegates\Lambdas.cs" />
-    <Compile Include="Evaluations\Sessional1-B.cs" />
-    <Compile Include="Events\BasicEvents.cs" />
-    <Compile Include="Events\AdvanceEvents.cs" />
-    <Compile Include="Generics\ExecuteDemo.cs" />
-    <Compile Include="Generics\GenericCollections.cs" />
-    <Compile Include="Generics\GenericExample.cs" />
-    <Compile Include="Generics\Generics.cs" />
-    <Compile Include="HRExample.cs" />
-    <Compile Include="Interfaces.cs" />
-    <Compile Include="Evaluations\Sessional1-A.cs" />
-    <Compile Include="Observer\CricketData_V1.0.0.1.cs" />
-    <Compile Include="Observer\CricketData_V1.0.0.0.cs" />
-    <Compile Include="Observer\CricketData_V3.0.0.2.cs" />
-    <Compile Include="Observer\CricketData_V3.0.0.1.cs" />
-    <Compile Include="Observer\CricketData_V3.0.0.0.cs" />
-    <Compile Include="Observer\CricketData_V2.cs" />
-    <Compile Include="Pizza\PizzaSolution.cs" />
+    <Compile Include="Migrations\201910301340093_navigationalPropertiesAdded.cs" />
+    <Compile Include="Migrations\201910301340093_navigationalPropertiesAdded.designer.cs">
+      <DependentUpon>201910301340093_navigationalPropertiesAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Threads\ThreadDemo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="DatabaseFirst\Student.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Student.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="DatabaseFirst\Student.edmx.diagram">
-      <DependentUpon>Student.edmx</DependentUpon>
-    </None>
+    <None Include="ClassDiagramQuiz3.cd" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="DatabaseFirst\Student.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Student.edmx</DependentUpon>
-      <LastGenOutput>Student.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DatabaseFirst\Student.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Student.edmx</DependentUpon>
-      <LastGenOutput>Student1.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <EmbeddedResource Include="Migrations\201910300537139_DatabaseCreated.resx">
+      <DependentUpon>201910300537139_DatabaseCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910300602219_CourseTableAdded.resx">
+      <DependentUpon>201910300602219_CourseTableAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910300605505_RelationshipCreated.resx">
+      <DependentUpon>201910300605505_RelationshipCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910300613259_RelationshipUpdated.resx">
+      <DependentUpon>201910300613259_RelationshipUpdated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910301340093_navigationalPropertiesAdded.resx">
+      <DependentUpon>201910301340093_navigationalPropertiesAdded.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

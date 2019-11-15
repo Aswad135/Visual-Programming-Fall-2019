@@ -1,27 +1,21 @@
-﻿using System;
+﻿using Polymorphism.Events;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HR = Polymorphism.HumanResource;
 
 namespace Polymorphism
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main_xxxx(string[] args)
         {
-            BaseEmployee employee = new Faculty(100, "Aamir");
-            
-            employee.Print();
-
-            employee = new Staff(200, "Mohiuddin");
-            
-            employee.Print();
-
-            employee = new AdminEmployee(800, "Amjad Khan");
-            employee.Print();
+            Console.WriteLine("Lectures of Visual Programming");
 
             Console.ReadKey();
         }
+
     }
 }
